@@ -156,7 +156,8 @@ The GIF is `out/gifs/main.gif`. It has 6 frames and is 768 by 320 pixels. Copy i
 | `hooks/make-colors.js`, `hooks/make-colors.d.ts` | Builds a theme from a few colors. Copied unchanged from Claude Code (see below). |
 | `tests/` | Tests for `/look`, the toolkit and the chat colors. |
 | `tools/render-look.mjs` | Renders a look to SVG and an HTML page, and checks its size. |
-| `assets/`, `art/` | The banner GIF and the script that makes its recipe. |
+| `tools/make-preview.mjs` | Writes the page that becomes `assets/preview.png`, the 16:9 picture of all looks. |
+| `assets/`, `art/` | The banner GIF, the 16:9 preview picture, and the script that makes the banner recipe. |
 | `AGENT.md` | A guide for AI agents: setup, rules and recipes. |
 
 ## Credits and licence

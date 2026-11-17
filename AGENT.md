@@ -70,6 +70,7 @@ To edit and see changes at once, add your local clone instead: `claude plugin ma
 | `hooks/make-colors.js`, `.d.ts` | Official, copied. Do not edit. |
 | `tests/` | `switching.test.ts` (`/look`), `kit.test.ts`, `chat-colors.test.tsx`. |
 | `tools/render-look.mjs` | Renders a look to SVG and an HTML page, and checks its limits. |
+| `tools/make-preview.mjs`, `assets/preview.png` | The 16:9 picture of all looks, for the theme listing on buildwithclaude.com. See "Preview picture for the listing". |
 | `art/make_banner_recipe.py`, `assets/banner.gif` | The README banner, made with Pixelbolt. |
 | `preview-*.svg` | Animated pictures for the README: the scene SVG of each look, copied from `render-look.mjs`. |
 
@@ -167,6 +168,20 @@ Use `--window-size=500,1000` for a phone and `--window-size=2000,1000` for a ver
 A still picture shows time zero of every animation. To show a moment, add CSS with `--css`, for example `--css ".run{animation:none!important;transform:translateX(110px)!important}"`. That writes `still-<id>.html`.
 
 You cannot see the real Claude app. Ask the owner for a screenshot when you need to check something there.
+
+## Preview picture for the listing
+
+`assets/preview.png` is the picture used by the theme listing on buildwithclaude.com. That site takes a PNG, JPG or GIF, ideally 16:9 and under 3 MB, so the animated `preview-*.svg` files do not fit. After you add or change a look (and copy its `preview-<id>.svg`), make the picture again:
+
+```bash
+node tools/make-preview.mjs <out-dir>
+```
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --window-size=1600,900 --screenshot=assets/preview.png file://<out-dir>/preview-grid.html
+```
+
+Check that the size is 1600 by 900 and under 3 MB. The picture is a still, so it does not show the motion.
 
 ## Banner
 
