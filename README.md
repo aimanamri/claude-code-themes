@@ -23,19 +23,19 @@ This repo holds six looks of Malaysia: **Petronas KL**, **Penang**, **Terengganu
 | 5 | `kelantan` | Dark. A Kelantan village at night: a wooden stage under a carved roof with a lit wayang kulit screen (the tree of life, Seri Rama and Hanuman, the clowns Pak Dogol and Wak Long) and musicians with a gong and a drum, a Kelantan Malay house on stilts, coconut palms, a wau bulan kite under a crescent moon, a spinning gasing top, and fireflies over the paddy fields. |
 | 6 | `kelantan-day` | **Light.** The same Kelantan village by day: the wayang kulit stage with its pale cloth screen and puppets, the house on stilts, palms, the sun, birds, a wau bulan kite and a spinning gasing over bright green paddy fields and blue hills. |
 
-![Petronas KL](preview-petronas-kl.png)
+<img src="preview-petronas-kl.svg" alt="Animated pixel art of Kuala Lumpur at dusk: Petronas KL" width="768">
 
-![Penang](preview-penang.png)
+<img src="preview-penang.svg" alt="Animated pixel art of George Town, Penang, at dusk: Penang" width="768">
 
-![Terengganu](preview-terengganu.png)
+<img src="preview-terengganu.svg" alt="Animated pixel art of the Terengganu coast by day: Terengganu" width="768">
 
-![Sepang F1](preview-sepang.png)
+<img src="preview-sepang.svg" alt="Animated pixel art of Sepang International Circuit at dusk: Sepang F1" width="768">
 
-![Kelantan](preview-kelantan.png)
+<img src="preview-kelantan.svg" alt="Animated pixel art of a Kelantan village at night with a wayang kulit shadow play: Kelantan" width="768">
 
-![Kelantan Day](preview-kelantan-day.png)
+<img src="preview-kelantan-day.svg" alt="Animated pixel art of a Kelantan village by day: Kelantan Day" width="768">
 
-These pictures are stills. In the app the scenes move: flags wave, fireworks go off, lanterns sway, water glints, and at Sepang two cars run along the track while the start lights come on one by one and the lightning flashes. For Sepang, the picture shows the cars, four start lights and a bolt of lightning at the same time. At Kelantan the lamp behind the screen flickers, and the shadow play changes every three seconds between the tree of life, Rama and Hanuman, and the two clowns; the kite's tail waves, the top spins and the fireflies blink. The Kelantan pictures show the second scene. At Kelantan Day the sun shimmers and the birds flap.
+These pictures move. Each one is an animated SVG made from the same code as the look in the app, and it shows the scene alone, without the chat on top. Flags wave, fireworks go off, lanterns sway, water glints, and at Sepang two cars run along the track while the start lights come on one by one and the lightning flashes. At Kelantan the lamp behind the screen flickers, and the shadow play changes every three seconds between the tree of life, Rama and Hanuman, and the two clowns; the kite's tail waves, the top spins and the fireflies blink. At Kelantan Day the sun shimmers and the birds flap. If your system asks for reduced motion, the pictures stand still.
 
 ## Install
 
