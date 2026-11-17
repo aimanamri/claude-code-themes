@@ -68,6 +68,17 @@ export const CHAT_COLORS: Readonly<Record<string, ChatColors>> = {
     code: '#ffd24a',
     codeBackground: '#2e2808',
   },
+  kelantan: {
+    // The rose red of Kelantan's songket and wau, so a heading differs from the gold accent.
+    heading: '#ff8a9a',
+    // Pale cream words in a red frame on dark brown, like the lit screen of a shadow play.
+    quote: '#fde8c4',
+    quoteBorder: '#c8402f',
+    quoteBackground: '#2a1410',
+    // Inline code: the jade green of the paddy fields on a dark green.
+    code: '#7fe3b8',
+    codeBackground: '#0e2a22',
+  },
 }
 
 // A fence of any indentation, so a fence inside a list item is still code.
