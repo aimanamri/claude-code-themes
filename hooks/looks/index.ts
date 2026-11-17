@@ -1,5 +1,6 @@
 import type { LookSpec } from './types'
 
+import { kelantan } from './kelantan'
 import { penang } from './penang'
 import { petronasKl } from './petronas-kl'
 import { sepang } from './sepang'
@@ -40,7 +41,7 @@ function withTaggedScenes(look: LookSpec): LookSpec {
 
 // Every look `/look` can switch to, in the order it lists them and `next` goes through them.
 // To add one: write hooks/looks/<id>.ts that exports a LookSpec, and list it here.
-export const LOOKS: readonly LookSpec[] = [petronasKl, penang, terengganu, sepang].map(withTaggedScenes)
+export const LOOKS: readonly LookSpec[] = [petronasKl, penang, terengganu, sepang, kelantan].map(withTaggedScenes)
 
 // The look used until one has been picked.
 export const FIRST_LOOK = LOOKS[0]?.id ?? 'off'
