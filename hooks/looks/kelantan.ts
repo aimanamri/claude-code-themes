@@ -40,7 +40,7 @@ const { theme, problems } = makeColors({
 const SHORE = 150
 
 // The ink of a shadow puppet, and of the dark shapes of the far village.
-const INK = '#2a0c04'
+export const INK = '#2a0c04'
 const FAR = '#150a20'
 
 // ---------- sky ----------
@@ -95,7 +95,7 @@ function kiteHalf(y: number): number {
   return 0
 }
 
-function wau(): string {
+export function wau(): string {
   const body = new Art()
   const moonShape = new Art()
   const tails = [new Art(), new Art()]
@@ -141,7 +141,7 @@ function wau(): string {
 
 // ---------- a gasing, the spinning top (foot at the origin) ----------
 
-function gasing(): string {
+export function gasing(): string {
   const a = new Art()
   const stripes = [new Art(), new Art()]
 
@@ -254,11 +254,11 @@ function house(): string {
 // ---------- the wayang kulit stage (centre of its foot at the origin) ----------
 
 // The screen sits at the right of the stage, centred on SCREEN_X, with its ground bar at row -12.
-const SCREEN_X = 13
-const CUT = '#ffd27a'
+export const SCREEN_X = 13
+export const CUT = '#ffd27a'
 
 // Seri Rama in profile, facing `d` (1 right, -1 left): a pointed crown, a long skirt, and a bow.
-function rama(a: Art, ox: number, oy: number, d: number, drawn: boolean): void {
+export function rama(a: Art, ox: number, oy: number, d: number, drawn: boolean): void {
   const m = (x: number): number => ox + d * x
 
   a.rect(ox - 2, oy - 4, 2, 4, INK)
@@ -281,7 +281,7 @@ function rama(a: Art, ox: number, oy: number, d: number, drawn: boolean): void {
 }
 
 // Hanuman, the white monkey, in profile: a raised club, and a long tail curling up behind.
-function hanuman(a: Art, ox: number, oy: number, d: number): void {
+export function hanuman(a: Art, ox: number, oy: number, d: number): void {
   const m = (x: number): number => ox + d * x
 
   a.rect(ox - 2, oy - 4, 2, 4, INK)
@@ -299,7 +299,7 @@ function hanuman(a: Art, ox: number, oy: number, d: number): void {
 }
 
 // Pak Dogol, the round clown with the big nose. `bob` lifts him by one row.
-function pakDogol(a: Art, ox: number, oy: number, d: number, bob: number): void {
+export function pakDogol(a: Art, ox: number, oy: number, d: number, bob: number): void {
   const m = (x: number): number => ox + d * x
   const y0 = oy - bob
 
@@ -313,7 +313,7 @@ function pakDogol(a: Art, ox: number, oy: number, d: number, bob: number): void 
 }
 
 // Wak Long, the tall, thin clown in a turban, with a staff.
-function wakLong(a: Art, ox: number, oy: number, d: number): void {
+export function wakLong(a: Art, ox: number, oy: number, d: number): void {
   const m = (x: number): number => ox + d * x
 
   a.rect(ox - 1, oy - 6, 1, 6, INK)
@@ -327,7 +327,7 @@ function wakLong(a: Art, ox: number, oy: number, d: number): void {
 }
 
 // The gunungan, the tree of life: a pointed leaf shape with a tree cut out of it.
-function gunungan(a: Art, ox: number, oy: number, h: number): void {
+export function gunungan(a: Art, ox: number, oy: number, h: number): void {
   const wide = h * 0.33
 
   for (let r = 0; r < h; r++) {
