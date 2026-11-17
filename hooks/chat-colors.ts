@@ -91,6 +91,17 @@ export const CHAT_COLORS: Readonly<Record<string, ChatColors>> = {
     code: '#8a2a3a',
     codeBackground: '#fbe0e4',
   },
+  sabah: {
+    // The green of the rainforest on Mount Kinabalu's foot.
+    heading: '#5fe0a8',
+    // Pale lavender words in a violet frame on deep indigo, like the sky overhead at sunset.
+    quote: '#dcd4ff',
+    quoteBorder: '#8f7aff',
+    quoteBackground: '#15122a',
+    // Inline code: the rose of the sunset on dark plum.
+    code: '#ffa8c0',
+    codeBackground: '#2a1220',
+  },
 }
 
 // A fence of any indentation, so a fence inside a list item is still code.
