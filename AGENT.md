@@ -71,7 +71,7 @@ To edit and see changes at once, add your local clone instead: `claude plugin ma
 | `tests/` | `switching.test.ts` (`/look`), `kit.test.ts`, `chat-colors.test.tsx`. |
 | `tools/render-look.mjs` | Renders a look to SVG and an HTML page, and checks its limits. |
 | `art/make_banner_recipe.py`, `assets/banner.gif` | The README banner, made with Pixelbolt. |
-| `preview-*.png` | Pictures for the README. |
+| `preview-*.svg` | Animated pictures for the README: the scene SVG of each look, copied from `render-look.mjs`. |
 
 The API types of the `claude-code` package are written by the app when the plugin loads, into `.claude-plugin/types/` (ignored by git). The `plugin-authoring` skill also ships them, with a guide to looks (`look.md`).
 
@@ -118,7 +118,7 @@ Do this on a branch `feat/<id>-look`.
 2. **Register it** in `hooks/looks/index.ts`: add the import and add it to the end of `LOOKS`.
 3. **Chat colors:** add an entry to `CHAT_COLORS` in `hooks/chat-colors.ts` (see the next recipe). Add the id to the list test and a render test in `tests/chat-colors.test.tsx`.
 4. **Render and look at it** (see below), on a wide, a normal and a phone shape. Fix what you see.
-5. **Update `README.md`:** the looks table, a preview picture (`preview-<id>.png`), the chat colors table, and the count in the first paragraph.
+5. **Update `README.md`:** the looks table, an animated preview picture (`preview-<id>.svg`, a copy of `<out-dir>/<id>.svg` from the render tool; copy it again after you change a scene), the chat colors table, and the count in the first paragraph.
 6. **Bump the plugin version** in `.claude-plugin/plugin.json` (a new look is a minor bump). See "Gotchas".
 7. Run the checks, make small commits (look; chat colors; docs; version), push, open the PR.
 8. After the merge, update an installed copy:
