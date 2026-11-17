@@ -19,7 +19,7 @@ The terminal and the editor extensions draw no looks.
 | Install id | `looks-malaysia@looks-malaysia` |
 | Repo | `aimanamri/claude-code-themes` on GitHub, public, MIT licence |
 | Default branch | `main` |
-| Looks | 5: `petronas-kl`, `penang`, `terengganu` (light), `sepang`, `kelantan` |
+| Looks | 6: `petronas-kl`, `penang`, `terengganu` (light), `sepang`, `kelantan`, `kelantan-day` (light) |
 | Language | TypeScript (`.ts`, `.tsx`), run by the app. No build step. No npm dependencies. |
 
 ## Provenance: keep this repo clean

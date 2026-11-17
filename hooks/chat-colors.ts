@@ -79,6 +79,18 @@ export const CHAT_COLORS: Readonly<Record<string, ChatColors>> = {
     code: '#7fe3b8',
     codeBackground: '#0e2a22',
   },
+  // A light look, so every color is dark enough to read on a pale page.
+  'kelantan-day': {
+    // The deep jade of the paddy fields.
+    heading: '#0b6a4c',
+    // Dark brown words in a red frame on cream, like the lit cloth of the screen.
+    quote: '#4a2a14',
+    quoteBorder: '#c8402f',
+    quoteBackground: '#fdf1dc',
+    // Inline code: songket rose on a pale pink.
+    code: '#8a2a3a',
+    codeBackground: '#fbe0e4',
+  },
 }
 
 // A fence of any indentation, so a fence inside a list item is still code.

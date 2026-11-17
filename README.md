@@ -6,7 +6,7 @@
 
 Looks for the Claude desktop and mobile apps. A look is a color theme with a moving pixel-art backdrop, and it can also color the headings, quotes and inline code in the chat.
 
-This repo holds five looks of Malaysia: **Petronas KL**, **Penang**, **Terengganu** (a light look), **Sepang F1** and **Kelantan**. The plugin is called `looks-malaysia`.
+This repo holds six looks of Malaysia: **Petronas KL**, **Penang**, **Terengganu** (a light look), **Sepang F1**, **Kelantan** and **Kelantan Day** (a light look). The plugin is called `looks-malaysia`.
 
 > **Where looks show.** Looks draw in the Claude desktop and mobile apps only. The terminal and the editor extensions do not draw them.
 
@@ -21,6 +21,7 @@ This repo holds five looks of Malaysia: **Petronas KL**, **Penang**, **Terenggan
 | 3 | `terengganu` | **Light.** The east coast by day: the Crystal Mosque, the Floating Mosque, a fishing boat, palms, a wau kite and a leatherback turtle. |
 | 4 | `sepang` | Dark. Sepang International Circuit at dusk: the tulip-roofed grandstand, the start gantry with its five lights, the control tower, the Petronas Towers on the horizon and F1 cars on the track, under a storm. |
 | 5 | `kelantan` | Dark. A Kelantan village at night: a wooden stage under a carved roof with a lit wayang kulit screen (the tree of life, Seri Rama and Hanuman, the clowns Pak Dogol and Wak Long) and musicians with a gong and a drum, a Kelantan Malay house on stilts, coconut palms, a wau bulan kite under a crescent moon, a spinning gasing top, and fireflies over the paddy fields. |
+| 6 | `kelantan-day` | **Light.** The same Kelantan village by day: the wayang kulit stage with its pale cloth screen and puppets, the house on stilts, palms, the sun, birds, a wau bulan kite and a spinning gasing over bright green paddy fields and blue hills. |
 
 ![Petronas KL](preview-petronas-kl.png)
 
@@ -32,7 +33,9 @@ This repo holds five looks of Malaysia: **Petronas KL**, **Penang**, **Terenggan
 
 ![Kelantan](preview-kelantan.png)
 
-These pictures are stills. In the app the scenes move: flags wave, fireworks go off, lanterns sway, water glints, and at Sepang two cars run along the track while the start lights come on one by one and the lightning flashes. For Sepang, the picture shows the cars, four start lights and a bolt of lightning at the same time. At Kelantan the lamp behind the screen flickers, and the shadow play changes every three seconds between the tree of life, Rama and Hanuman, and the two clowns; the kite's tail waves, the top spins and the fireflies blink. The Kelantan picture shows the second scene.
+![Kelantan Day](preview-kelantan-day.png)
+
+These pictures are stills. In the app the scenes move: flags wave, fireworks go off, lanterns sway, water glints, and at Sepang two cars run along the track while the start lights come on one by one and the lightning flashes. For Sepang, the picture shows the cars, four start lights and a bolt of lightning at the same time. At Kelantan the lamp behind the screen flickers, and the shadow play changes every three seconds between the tree of life, Rama and Hanuman, and the two clowns; the kite's tail waves, the top spins and the fireflies blink. The Kelantan pictures show the second scene. At Kelantan Day the sun shimmers and the birds flap.
 
 ## Install
 
@@ -79,11 +82,11 @@ The look you pick is saved in `~/.claude/looks-malaysia.json`. Every chat follow
 
 A theme holds only color scales, so it cannot color markdown by itself. This plugin adds hooks that draw some parts of a message in colors of their own. They run for Claude's replies and for your own prompts (typed in the app, typed in a terminal or sent from a phone). Task notifications, peer messages and scheduled prompts are left to the app.
 
-| Part of a message | `petronas-kl` | `penang` | `terengganu` (light) | `sepang` | `kelantan` |
-| --- | --- | --- | --- | --- | --- |
-| Heading (`#`, `##`, `###`) | Bold, flag yellow `#f2c230`. | Bold, lantern orange `#ff9e4a`. | Bold, songket maroon `#a8323f`. | Bold, teal `#00d2be`. | Bold, rose red `#ff8a9a`. |
-| Quote (`>`) | Pale teal italic `#8fe3d8`, teal frame `#2ed3c6`, dark blue `#0e2230`. | Pale peach italic `#ffd9b0`, orange frame `#ff9e4a`, dark brown `#2a1a10`. | Dark brown italic `#5a3d10`, gold frame `#c8962a`, cream `#fbf0d8`. | Pale pink italic `#ffd6d6`, red frame `#ff3b3b`, dark red `#2a1214`. | Pale cream italic `#fde8c4`, red frame `#c8402f`, dark brown `#2a1410`. |
-| Inline code | Gold `#ffd45e` on dark gold `#2b2310`, mono. | Teal `#7ee0d0` on dark teal `#0e2a2c`, mono. | Deep teal `#0b6a70` on pale teal `#d3eef0`, mono. | Yellow `#ffd24a` on dark olive `#2e2808`, mono. | Jade `#7fe3b8` on dark green `#0e2a22`, mono. |
+| Part of a message | `petronas-kl` | `penang` | `terengganu` (light) | `sepang` | `kelantan` | `kelantan-day` (light) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Heading (`#`, `##`, `###`) | Bold, flag yellow `#f2c230`. | Bold, lantern orange `#ff9e4a`. | Bold, songket maroon `#a8323f`. | Bold, teal `#00d2be`. | Bold, rose red `#ff8a9a`. | Bold, deep jade `#0b6a4c`. |
+| Quote (`>`) | Pale teal italic `#8fe3d8`, teal frame `#2ed3c6`, dark blue `#0e2230`. | Pale peach italic `#ffd9b0`, orange frame `#ff9e4a`, dark brown `#2a1a10`. | Dark brown italic `#5a3d10`, gold frame `#c8962a`, cream `#fbf0d8`. | Pale pink italic `#ffd6d6`, red frame `#ff3b3b`, dark red `#2a1214`. | Pale cream italic `#fde8c4`, red frame `#c8402f`, dark brown `#2a1410`. | Dark brown italic `#4a2a14`, red frame `#c8402f`, cream `#fdf1dc`. |
+| Inline code | Gold `#ffd45e` on dark gold `#2b2310`, mono. | Teal `#7ee0d0` on dark teal `#0e2a2c`, mono. | Deep teal `#0b6a70` on pale teal `#d3eef0`, mono. | Yellow `#ffd24a` on dark olive `#2e2808`, mono. | Jade `#7fe3b8` on dark green `#0e2a22`, mono. | Rose `#8a2a3a` on pale pink `#fbe0e4`, mono. |
 
 The app keeps drawing everything else, as before. A paragraph or a list is drawn by the hook only if it has inline code. A block with a link, a URL, a table, a rule, HTML or a code fence stays with the app, so links stay clickable and tables keep their layout. Inline code in those blocks keeps the app's own gray.
 
