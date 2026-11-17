@@ -102,8 +102,8 @@ test('a fence inside a list item is code even when it is indented', async () => 
   expect(parts.some(part => part.kind === 'heading')).toBe(false)
 })
 
-test('only Petronas KL, Penang, Terengganu, Sepang and Kelantan have chat colors', async () => {
-  expect(Object.keys(CHAT_COLORS)).toEqual(['petronas-kl', 'penang', 'terengganu', 'sepang', 'kelantan'])
+test('only Petronas KL, Penang, Terengganu, Sepang, Kelantan and Kelantan Day have chat colors', async () => {
+  expect(Object.keys(CHAT_COLORS)).toEqual(['petronas-kl', 'penang', 'terengganu', 'sepang', 'kelantan', 'kelantan-day'])
 })
 
 // WCAG contrast of two hex colors: 4.5 is the usual floor for body text.
@@ -319,6 +319,19 @@ test('in Kelantan a heading, a quote and inline code get the Kelantan colors', a
   engine(on, 'kelantan')
   await $.session.start({ cwd: '/', surface: 'desktop', isInteractive: true })
   const colors = CHAT_COLORS.kelantan
+
+  const ui = await $.ui.mount(REPLY('## Plan\n\n> Quoted words\n\nRun `ls -la` now', 'desktop'))
+
+  expect((await ui.find({ type: 'Text', text: /Plan/ }))?.props?.color).toBe(colors?.heading)
+  expect((await ui.find({ type: 'Text', text: /Quoted words/ }))?.props?.color).toBe(colors?.quote)
+  expect((await ui.find({ type: 'Text', text: /^ls -la$/ }))?.props?.color).toBe(colors?.code)
+  await ui.unmount()
+})
+
+test('in Kelantan Day, a light look, a heading, a quote and inline code get its colors', async ($, on) => {
+  engine(on, 'kelantan-day')
+  await $.session.start({ cwd: '/', surface: 'desktop', isInteractive: true })
+  const colors = CHAT_COLORS['kelantan-day']
 
   const ui = await $.ui.mount(REPLY('## Plan\n\n> Quoted words\n\nRun `ls -la` now', 'desktop'))
 
